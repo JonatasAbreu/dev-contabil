@@ -6,6 +6,7 @@
 }
 .caixa-superior {
     background-image: url(./devcontabil.png);
+    background-size: cover;
     height: 90vh;
 }
 
