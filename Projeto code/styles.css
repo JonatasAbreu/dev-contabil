@@ -26,6 +26,7 @@
     display: inline;
     margin-left: 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 h1 {
@@ -37,6 +38,8 @@ h1 {
 }
 
 form {
+    opacity: 0;
+    transition: opacity 1s linear;
     background-color: #FFFFFF;
     border-radius: 10px;
     float: right;
@@ -44,6 +47,10 @@ form {
     margin-right: 50px;
     position: relative;
     bottom: 70px;
+}
+
+.mostrar-formulario {
+    opacity: 1;
 }
 
 input {
@@ -84,7 +91,7 @@ button {
    height: 40px; 
    cursor: pointer;
    border: none;
-   border-radius: ;
+   border-radius: 5px;
    background: #40bb15;
    color: #FFFFFF;
 }
@@ -95,12 +102,13 @@ button {
     margin-bottom: 50px;
 }
 
-.titulo-meio {
+#titulo-meio {
     font-size: 40px;
     color: #252b42;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
+    text-decoration: none;
 }
 
 .card {
@@ -131,7 +139,7 @@ li {
     background-color: #00095d;
 }
 
-.titulo-inferior {
+#titulo-inferior {
     color: #FFFFFF;
     font-size: 40px;
     text-align: center;

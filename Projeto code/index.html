@@ -16,38 +16,38 @@
     <div class="caixa-superior">
         <div class="cabecalho">
             <h2 class="titulo-cabecalho">Dev Contábil</h2>
-            <a class="link-cabecalho">Quem Somos</a>
-            <a class="link-cabecalho">Serviços</a>
-            <a class="link-cabecalho">Contato</a>
+            <a href="#titulo-inferior" class="link-cabecalho">Quem Somos</a>
+            <a href="#titulo-meio" class="link-cabecalho">Serviços</a>
+            <a class="link-cabecalho" onclick="chamecontato()" >Contato</a>
         </div>
 
         <h1>Dev Contábil</h1>
 
-        <form>
+        <form id="formulario-contato" action="https://formsubmit.co/jonatasabreu1234@gmail.com" method="POST">
             <h3 class="titulo-formulario">Entre em contato</h3>
 
             <label>
                 Nome
-                <input placeholder="Digite seu Nome" />
+                <input type="text" name="Nome" placeholder="Digite seu Nome" required/>
             </label>
 
             <label>
                 E-mail
-                <input placeholder="Digite seu E-mail" />
+                <input type="email" name="email" placeholder="Digite seu E-mail" required />
             </label>
 
             <label>
                 Fale Conosco
-                <textarea placeholder="Qal é sua duvida?"></textarea>
+                <textarea name="info" placeholder="Qal é sua duvida?"></textarea>
 
             </label>
 
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
 
         </form>
     </div>
 
-    <h2 class="titulo-meio">Nossos Serviços</h2>
+    <h2 id="titulo-meio">Nossos Serviços</h2>
 
     <div class="caixa-central">
         <div class="card">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="caixa-inferior">
-                <h2 class="titulo-inferior">Sobre Nós</h2>
+                <h2 id="titulo-inferior">Sobre Nós</h2>
                 <p class="paragrafo-inferior">Estamos presente no mercado há mais de 4 décadas auxiliando nossos clientes nacionais e
                     internacionais
                     que já atuam ou desejam abrir seus negócios e ingressar no Brasil.
@@ -110,4 +110,12 @@
             </div>
 </body>
 
+<script>
+let formulario = document.getElementById("formulario-contato")
+function chamecontato() {
+    formulario.className = "mostrar-formulario"
+}
+        
+console.log(formulario)
+</script>
 </html>
